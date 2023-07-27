@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ffdpr/static/css/main.38d7c371.css",
+    "main.js": "/ffdpr/static/js/main.8b55186e.js",
+    "index.html": "/ffdpr/index.html",
+    "main.38d7c371.css.map": "/ffdpr/static/css/main.38d7c371.css.map",
+    "main.8b55186e.js.map": "/ffdpr/static/js/main.8b55186e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38d7c371.css",
+    "static/js/main.8b55186e.js"
+  ]
+}
