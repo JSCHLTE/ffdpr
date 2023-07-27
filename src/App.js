@@ -17,11 +17,12 @@ function App() {
     event.preventDefault()
     if(!inputRef.current.value.trim()) {
       alert("Enter a team name.")
+      inputRef.current.focus()
       return
     }
     for(let i = 0; i < teamList.length; i++){
       if(teamList[i] === inputRef.current.value){
-        alert("Team is already entered with this name")
+        alert("Team is already entered with this name.")
         setTeamInput(oldInput => "")
         inputRef.current.focus()
         return
@@ -35,6 +36,11 @@ function App() {
   }
 
   function handlePick(event) {
+    if(teamList <= 0){
+      alert("Please add a team into the team list.")
+      inputRef.current.focus()
+      return
+    }
     const rng = Math.floor(Math.random()*teamList.length)
     const randomPick = teamList[rng]
     setPickedList(oldPickedList => ([
