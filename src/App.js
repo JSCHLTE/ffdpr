@@ -95,7 +95,7 @@ function App() {
         </div>
       </div>
       <footer>
-        <p>© 2023 JSCHLTE v1.0</p>
+        <p>© 2023 JSCHLTE</p>
       </footer>
     </div>
   );
