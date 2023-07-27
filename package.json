@@ -1,6 +1,6 @@
 {
   "homepage": "http://jschlte.github.io/ffdpr",
-  "name": "Jordans-Fantasy-Football-Randomizer-App",
+  "name": "ffdpr",
   "version": "1.0",
   "private": false,
   "dependencies": {
