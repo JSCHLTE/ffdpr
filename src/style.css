@@ -7,6 +7,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .App {
@@ -20,33 +23,38 @@ body {
     text-align: center;
 }
 
-.formBtn {
-    display: block;
-}
-
-form button{
-    width: 175px;
-    height: 40px;
-    cursor: pointer;
-    background: #000;
+.titleh2 {
     color: #fff;
-    border: 1px solid #000;
-    border-radius: 50px;
-    margin: 0.5rem;
 }
+         
+.formBtn button{
+    background-image: linear-gradient(to right, #DC2424 0%, #4A569D  51%, #DC2424  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    border: none;
+  }
 
-form button:hover {
-    background: #222;
-    font-weight: bold;
-}
+  .formBtn button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 form input {
     width: 80%;
-    height: 35px;
+    height: 40px;
     border-radius: 5px;
-    border: 2px solid red;
+    border: 1px solid red;
     transition: all 0.3s ease;
     padding: 0 0.5rem;
+    margin: 1.25rem 0;
 }
 
 form input:focus {
@@ -64,7 +72,7 @@ form input:focus {
 
 .viewWrapper div {
     margin: 0 2.5rem 3rem;
-    background: rgba(222, 222, 222, 0.5);
+    background: rgba(222, 222, 222, 0.8);
     min-width: 250px;
     text-align: center;
     height: 400px;
@@ -100,11 +108,38 @@ form input:focus {
     background: rgba(225, 225, 225, 0.8);
 }
 
+.notiAlert {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    transform: translateX(-200%);
+    transition: 0.5s;
+}
+
+.notiAlert i {
+    width: 15%;
+    margin: 0 0.75rem 0 0;
+}
+
+.notiActive {
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+footer p {
+    color: #fff;
+}
+
 .copyright {
-    color: #111;
+    color: #fff;
 }
 
 .copyright:hover {
-    color: #000;
+    opacity: 0.5;
     text-decoration: none;
 }
