@@ -25,6 +25,7 @@ body {
 
 .titleh2 {
     color: #fff;
+    margin: 0 2.5rem;
 }
          
 .formBtn button{
@@ -72,12 +73,34 @@ form input:focus {
 
 .viewWrapper div {
     margin: 0 2.5rem 3rem;
-    background: rgba(222, 222, 222, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     min-width: 250px;
     text-align: center;
     height: 400px;
     overflow-y: scroll;
 }
+
+/*SCROLLBAR*/
+.viewWrapper div::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+.viewWrapper div::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+.viewWrapper div::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+.viewWrapper div::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
+/*SCROLLBAR*/ 
 
 .viewWrapper div ol {
     margin: 1.5rem 0;
@@ -86,6 +109,7 @@ form input:focus {
 .viewWrapper div ol li {
     list-style-position: inside;
     padding: 1rem 0;
+    color: #fff;
 }
 
 .remove {
@@ -100,12 +124,12 @@ form input:focus {
     cursor: pointer;
 }
 
-.viewWrapper div ol li::before {
-    content: attr(data-trash);
+.viewWrapper div ol li:nth-child(even) {
+    background: rgba(30, 30, 30, 1);
 }
 
-.viewWrapper div ol li:nth-child(even) {
-    background: rgba(225, 225, 225, 0.8);
+.viewWrapper h2 {
+    color: #fff;
 }
 
 .notiAlert {
@@ -117,7 +141,7 @@ form input:focus {
     left: 5vw;
     padding: 0.25rem 0.75rem;
     border-radius: 5px;
-    transform: translateX(-200%);
+    transform: translateX(-25vw);
     transition: 0.5s;
 }
 
