@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ffdpr/static/css/main.955c460d.css",
+    "main.css": "/ffdpr/static/css/main.d67b54f4.css",
     "main.js": "/ffdpr/static/js/main.46658f4b.js",
     "static/media/img.jpg": "/ffdpr/static/media/img.84693b98e1b781c5ed58.jpg",
     "index.html": "/ffdpr/index.html",
-    "main.955c460d.css.map": "/ffdpr/static/css/main.955c460d.css.map",
+    "main.d67b54f4.css.map": "/ffdpr/static/css/main.d67b54f4.css.map",
     "main.46658f4b.js.map": "/ffdpr/static/js/main.46658f4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.955c460d.css",
+    "static/css/main.d67b54f4.css",
     "static/js/main.46658f4b.js"
   ]
 }
