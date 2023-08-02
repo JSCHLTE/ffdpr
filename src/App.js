@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import Style from "./style.css"
+import "./style.css"
 
 function App() {
 
@@ -8,10 +8,12 @@ function App() {
   const [pickedList, setPickedList] = useState(JSON.parse(localStorage.getItem("pickedList")) || [])
   const inputRef = useRef(null)
 
+  //Adds team list values into localStorage when team list array is modified
   useEffect(() => {
     localStorage.setItem("teamList", JSON.stringify(teamList))
   }, [teamList])
 
+    //Adds draft list values into localStorage when draft list array is modified
   useEffect(() => {
     localStorage.setItem("pickedList", JSON.stringify(pickedList))
   }, [pickedList])
@@ -20,6 +22,7 @@ function App() {
     setTeamInput(event.target.value)
   }
 
+  //Adds a team into the team list when the enter button is hit or the add team button is clicked.
   function handleSubmit(event) {
     event.preventDefault()
     if(!inputRef.current.value.trim()) {
@@ -43,6 +46,7 @@ function App() {
     setTeamInput(oldInput => "")
   }
 
+  //Will select a random team from the team list and put them into the draft order list.
   function handlePick(event) {
     if(teamList <= 0){
       alert("Please add a team into the team list.")
@@ -60,6 +64,7 @@ function App() {
     setTeamList(oldTeamList => ([...oldTeamList]))
   }
 
+  //Deletes a team when clicked on in the teams list.
   function delItem(event) {
     for(let i = 0; i < teamList.length; i++) {
       if(event.target.innerText === teamList[i]) {
@@ -69,20 +74,26 @@ function App() {
     }
   }
 
+  //Clears draft order when clear button is clicked.
   function handleClear(event) {
     event.preventDefault()
     setPickedList(oldPickedList => [])
     createNoti("Draft order cleared.")
   }
 
+  //Creates notification when called.
   function createNoti(notiMsg){
-    const notiNode = document.querySelector(".notiAlert")
-    const notiMsgElement = document.getElementById("notiMsg")
-    notiNode.classList.add("notiActive")
-    notiMsgElement.innerText = notiMsg
+    const notiWrapper = document.querySelector(".notiWrapper")
+    const newNoti = document.createElement("div")
+    newNoti.innerHTML = `<i class="fas fa-exclamation-circle"></i><p>${notiMsg}</p>`
+    notiWrapper.appendChild(newNoti)
+    newNoti.classList.add("notiActive")
     setTimeout(() => {
-      notiNode.classList.remove("notiActive")
-    }, 2000);
+      newNoti.classList.remove("notiActive")
+    }, 2500);
+    setTimeout(() => {
+      newNoti.remove();
+    }, 3500);
   }
 
 
@@ -119,9 +130,7 @@ function App() {
           </ol>
         </div>
       </div>
-      <div className='notiAlert'>
-        <i className="fas fa-exclamation-circle"></i>
-        <p id='notiMsg'></p>
+      <div className='notiWrapper'>
       </div>
       <footer>
         <p>© 2023 <a href='https://jschlte.github.io/' target='_blank' rel='noreferrer' className='copyright'>Jordan S.</a></p>

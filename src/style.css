@@ -132,27 +132,31 @@ form input:focus {
     color: #fff;
 }
 
-.notiAlert {
-    background: #fff;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 5vh;
-    left: 5vw;
-    padding: 0.25rem 0.75rem;
-    border-radius: 5px;
-    transform: translateX(-25vw);
-    transition: 0.5s;
+.notiWrapper {
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+    width: 250px;
 }
 
-.notiAlert i {
-    width: 15%;
-    margin: 0 0.75rem 0 0;
+.notiWrapper div {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease !important;
 }
 
 .notiActive {
-    transform: translateX(0);
-    transition: 0.5s;
+    transition: opacity 0.5s ease !important;
+    opacity: 1 !important;
+}
+
+.notiWrapper div i {
+    width: 15%;
 }
 
 footer p {
